@@ -4,6 +4,7 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendAudio;
 import org.telegram.telegrambots.meta.api.methods.send.SendDocument;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -120,6 +121,18 @@ public class telegramSimpleBot extends TelegramLongPollingBot {
             } else if (data.equals("Мастер времени MP3")) {
                 sendLocalAudioToUser(chatId.toString(),"C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Брайан Трейси/MP3/Мастер времени.mp3","Мастер времени","Брайан Трейси");
             }
+
+
+
+              else if (data.equals("Стивен Кови")) {
+                StevinKovin(chatId.toString());
+            } else if (data.equals("навыков высокоэффективных людей")) {
+                efficent7(chatId.toString());
+            } else if (data.equals("навыков высокоэффективных людей PDF")) {
+                sendPdfToUser(chatId.toString(),"C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Стивен Кови/PDF/7 навыков высокоэффективных людей СтивенКови.pdf");
+            } else if (data.equals("навыков высокоэффективных людей MP3")) {
+                sendLocalAudioToUser(chatId.toString(),"C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Стивен Кови/MP3/47584.mp3","7 навыков высокоэффективных людей","Стивен Кови");
+            }
             try {
                 execute(sendMessage);
             } catch (TelegramApiException e) {
@@ -130,6 +143,8 @@ public class telegramSimpleBot extends TelegramLongPollingBot {
     }
 
     public void chooseAuthor(String chatId){
+        sendPhoto(chatId.toString(), new File("C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/photo_2024-02-12_20-01-34.jpg"));
+
         String startMessage = "Приветствую тебя! Я твой личный библиотекарь \uD83D\uDCDA✨\n" +
                 "\n" +
                 "Я здесь, чтобы помочь тебе насладиться замечательными книгами, предоставляя доступ к аудиокнигам и книгам в формате PDF. Просто отправь мне название книги или выбери из списка доступных опций, и я сделаю все возможное, чтобы удовлетворить твои чтению и прослушиванию. \n" +
@@ -167,6 +182,7 @@ public class telegramSimpleBot extends TelegramLongPollingBot {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
 
+        sendPhoto(chatId.toString(),new File("C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/chooseAuthor.jpg"));
         sendMessage.setText("Выбрать автор");
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
@@ -197,26 +213,103 @@ public class telegramSimpleBot extends TelegramLongPollingBot {
         inlineKeyboardButton3.setText("Тони Роббинс");
         inlineKeyboardButton4.setText("Дейл Карнеги");
         inlineKeyboardButton5.setText("Брайан Трейси");
+        inlineKeyboardButton6.setText("Стивен Кови");
 
         inlineKeyboardButton1.setCallbackData("Наполеон Хилл");
         inlineKeyboardButton2.setCallbackData("Барбара Шер");
         inlineKeyboardButton3.setCallbackData("Тони");
         inlineKeyboardButton4.setCallbackData("Дейл Карнеги");
         inlineKeyboardButton5.setCallbackData("Брайан Трейси");
+        inlineKeyboardButton6.setCallbackData("Стивен Кови");
 
         inlineKeyboardButtonList1.add(inlineKeyboardButton1);
         inlineKeyboardButtonList2.add(inlineKeyboardButton2);
         inlineKeyboardButtonList3.add(inlineKeyboardButton3);
         inlineKeyboardButtonList4.add(inlineKeyboardButton4);
         inlineKeyboardButtonList5.add(inlineKeyboardButton5);
+        inlineKeyboardButtonList6.add(inlineKeyboardButton6);
 
         inlineButtons.add(inlineKeyboardButtonList1);
         inlineButtons.add(inlineKeyboardButtonList2);
         inlineButtons.add(inlineKeyboardButtonList3);
         inlineButtons.add(inlineKeyboardButtonList4);
         inlineButtons.add(inlineKeyboardButtonList5);
-      //  inlineButtons.add(inlineKeyboardButtonList6);
+        inlineButtons.add(inlineKeyboardButtonList6);
        // inlineButtons.add(inlineKeyboardButtonList3);
+
+        inlineKeyboardMarkup.setKeyboard(inlineButtons);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+        try {
+            execute(sendMessage);
+        } catch (TelegramApiException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void StevinKovin(String chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendPhoto(chatId.toString(),new File("C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Стивен Кови/3-2.jpeg"));
+
+
+        sendMessage.setText("Выбрать книгу Стивен Кови");
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
+        List<InlineKeyboardButton> inlineKeyboardButtonList1 = new ArrayList<>();
+        List<InlineKeyboardButton> inlineKeyboardButtonList2 = new ArrayList<>();
+        List<InlineKeyboardButton> inlineKeyboardButtonList3 = new ArrayList<>();
+        InlineKeyboardButton inlineKeyboardButton1 = new InlineKeyboardButton();
+        InlineKeyboardButton inlineKeyboardButton2 = new InlineKeyboardButton();
+        InlineKeyboardButton inlineKeyboardButton3 = new InlineKeyboardButton();
+
+        inlineKeyboardButton1.setText("навыков высокоэффективных людей");
+
+
+        inlineKeyboardButton1.setCallbackData("навыков высокоэффективных людей");
+
+
+        inlineKeyboardButtonList1.add(inlineKeyboardButton1);
+
+        inlineButtons.add(inlineKeyboardButtonList1);
+
+
+        inlineKeyboardMarkup.setKeyboard(inlineButtons);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+        try {
+            execute(sendMessage);
+        } catch (TelegramApiException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void efficent7(String chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+
+
+        sendMessage.setText("MP3 или PDF");
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
+        List<InlineKeyboardButton> inlineKeyboardButtonList1 = new ArrayList<>();
+        List<InlineKeyboardButton> inlineKeyboardButtonList2 = new ArrayList<>();
+        InlineKeyboardButton inlineKeyboardButton1 = new InlineKeyboardButton();
+        InlineKeyboardButton inlineKeyboardButton2 = new InlineKeyboardButton();
+
+
+        inlineKeyboardButton1.setText("MP3");
+        inlineKeyboardButton2.setText("PDF");
+
+
+        inlineKeyboardButton1.setCallbackData("навыков высокоэффективных людей MP3");
+        inlineKeyboardButton2.setCallbackData("навыков высокоэффективных людей PDF");
+
+
+        inlineKeyboardButtonList1.add(inlineKeyboardButton1);
+        inlineKeyboardButtonList2.add(inlineKeyboardButton2);
+
+        inlineButtons.add(inlineKeyboardButtonList1);
+        inlineButtons.add(inlineKeyboardButtonList2);
+
 
         inlineKeyboardMarkup.setKeyboard(inlineButtons);
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);
@@ -231,7 +324,8 @@ public class telegramSimpleBot extends TelegramLongPollingBot {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
 
-        sendMessage.setText("Выбрать книгу");
+        sendPhoto(chatId.toString(),new File("C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Брайан Трейси/BTracy_current2015-20161201-113908.jpg"));
+        sendMessage.setText("Выбрать книгу Брайан Трейси");
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
         List<InlineKeyboardButton> inlineKeyboardButtonList1 = new ArrayList<>();
@@ -387,7 +481,8 @@ public class telegramSimpleBot extends TelegramLongPollingBot {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
 
-        sendMessage.setText("Выбрать книгу");
+        sendPhoto(chatId.toString(), new File("C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Дейл Карнеги/97ac38fdb02f7e87a9a1f3811c040bb7--dale-carnegie-stepping-stones.jpg"));
+        sendMessage.setText("Выбрать книгу Дейл Карнеги");
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
         List<InlineKeyboardButton> inlineKeyboardButtonList1 = new ArrayList<>();
@@ -501,7 +596,8 @@ public class telegramSimpleBot extends TelegramLongPollingBot {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
 
-        sendMessage.setText("Выбрать книгу");
+        sendPhoto(chatId.toString(),new File("C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Тони Руббинс/7596769b76c7cfbf27c0f547dfbd5353.jpg"));
+        sendMessage.setText("Выбрать книгу Тони Руббинс");
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
         List<InlineKeyboardButton> inlineKeyboardButtonList1 = new ArrayList<>();
@@ -615,7 +711,8 @@ public class telegramSimpleBot extends TelegramLongPollingBot {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
 
-        sendMessage.setText("Выбрать книгу");
+        sendPhoto(chatId.toString(),new File("C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Барбара Шер/nrjd8V5oswzM3sKfYAEq0Q.jpg"));
+        sendMessage.setText("Выбрать книгу Барбара Шер");
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
         List<InlineKeyboardButton> inlineKeyboardButtonList1 = new ArrayList<>();
@@ -688,6 +785,7 @@ public void NapaleonHiil(String chatId){
     SendMessage sendMessage = new SendMessage();
     sendMessage.setChatId(chatId);
 
+    sendPhoto(chatId.toString(), new File("C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Наполеон Хилл/MV5BYjViZjUwMjctODAyNy00Yjc3LTkwOWYtOTJhODg1Yzk1NDQ3XkEyXkFqcGdeQXVyMjA2NDEwMjg@._V1_.jpg"));
 
     sendMessage.setText("Выбрать книгу Наполеон Хилл");
     InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
@@ -865,6 +963,24 @@ public void NapaleonHiil(String chatId){
         } catch (TelegramApiException e) {
             System.err.println("Ошибка отправки аудио: " + e.getMessage());
         }
+    }
+    public void sendPhoto(String chatId, File photoFilePath) {
+        // Создаем объект SendPhoto
+        SendPhoto sendPhoto = new SendPhoto();
+        // Устанавливаем идентификатор чата, куда будет отправлена фотография
+        sendPhoto.setChatId(chatId);
 
+        // Создаем объект InputFile и передаем в него файл с фотографией
+        InputFile photo = new InputFile(photoFilePath);
+        // Устанавливаем фотографию для отправки
+        sendPhoto.setPhoto(photo);
+
+        try {
+            // Отправляем фотографию
+            execute(sendPhoto);
+        } catch (TelegramApiException e) {
+            System.out.println("Ошибка при отправке фотографии: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 }
