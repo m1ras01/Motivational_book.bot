@@ -252,7 +252,7 @@ public class telegramSimpleBot extends TelegramLongPollingBot {
         sendPhoto(chatId.toString(),new File("C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Стивен Кови/3-2.jpeg"));
 
 
-        sendMessage.setText("Выбрать книгу Стивен Кови");
+        sendMessage.setText("Стивен Кови (Stephen Covey) — американский писатель, педагог и бизнес-консультант, наиболее известный своей книгой \"7 навыков высокоэффективных людей\" (\"The 7 Habits of Highly Effective People\"). Он родился 24 октября 1932 года в Салт-Лейк-Сити, штат Юта, и умер 16 июля 2012 года. \n Выбрать книгу");
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
         List<InlineKeyboardButton> inlineKeyboardButtonList1 = new ArrayList<>();
@@ -325,7 +325,7 @@ public class telegramSimpleBot extends TelegramLongPollingBot {
         sendMessage.setChatId(chatId);
 
         sendPhoto(chatId.toString(),new File("C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Брайан Трейси/BTracy_current2015-20161201-113908.jpg"));
-        sendMessage.setText("Выбрать книгу Брайан Трейси");
+        sendMessage.setText("Брайан Трейси (Brian Tracy) – визионер, мотивационный оратор и автор бестселлеров в области саморазвития и деловой литературы. Он родился 5 января 1944 года в Канаде. Трейси начал свою карьеру в продажах, работая в различных компаниях. Вскоре он основал собственное дело и стал известен как эксперт в области управления временем, лидерства и личной эффективности."+"\n Выбрать книгу");
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
         List<InlineKeyboardButton> inlineKeyboardButtonList1 = new ArrayList<>();
@@ -367,7 +367,7 @@ public class telegramSimpleBot extends TelegramLongPollingBot {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
 
-
+        sendMessage.setText("Брайан Трейси (Brian Tracy) – визионер, мотивационный оратор и автор бестселлеров в области саморазвития и деловой литературы. Он родился 5 января 1944 года в Канаде. Трейси начал свою карьеру в продажах, работая в различных компаниях. Вскоре он основал собственное дело и стал известен как эксперт в области управления временем, лидерства и личной эффективности.");
         sendMessage.setText("MP3 или PDF");
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
@@ -482,7 +482,7 @@ public class telegramSimpleBot extends TelegramLongPollingBot {
         sendMessage.setChatId(chatId);
 
         sendPhoto(chatId.toString(), new File("C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Дейл Карнеги/97ac38fdb02f7e87a9a1f3811c040bb7--dale-carnegie-stepping-stones.jpg"));
-        sendMessage.setText("Выбрать книгу Дейл Карнеги");
+        sendMessage.setText("Дейл Карнеги (Dale Carnegie) - американский писатель, лектор и предприниматель, наиболее известный своими книгами по самосовершенствованию, межличностным отношениям и коммуникации. Он родился 24 ноября 1888 года в Миссури, США, и умер 1 ноября 1955 года. \n Выбрать книгу");
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
         List<InlineKeyboardButton> inlineKeyboardButtonList1 = new ArrayList<>();
@@ -597,7 +597,7 @@ public class telegramSimpleBot extends TelegramLongPollingBot {
         sendMessage.setChatId(chatId);
 
         sendPhoto(chatId.toString(),new File("C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Тони Руббинс/7596769b76c7cfbf27c0f547dfbd5353.jpg"));
-        sendMessage.setText("Выбрать книгу Тони Руббинс");
+        sendMessage.setText("Тони Роббинс - американский автор мотивационной литературы, бизнес-тренер и публичный оратор, широко известный своими семинарами и книгами по саморазвитию и достижению успеха. Он родился 29 февраля 1960 года в Северной Калифорнии, США. \n Выбрать книгу");
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
         List<InlineKeyboardButton> inlineKeyboardButtonList1 = new ArrayList<>();
@@ -712,7 +712,8 @@ public class telegramSimpleBot extends TelegramLongPollingBot {
         sendMessage.setChatId(chatId);
 
         sendPhoto(chatId.toString(),new File("C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Барбара Шер/nrjd8V5oswzM3sKfYAEq0Q.jpg"));
-        sendMessage.setText("Выбрать книгу Барбара Шер");
+        sendMessage.setText("\n" +
+                "Барбара Шер (Barbara Sher) - это американская писательница, мотивационный тренер и публичный оратор, известная своими работами в области самопомощи и саморазвития. Она родилась 14 августа 1935 года в Нью-Йорке, США. \n Выбрать книгу");
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
         List<InlineKeyboardButton> inlineKeyboardButtonList1 = new ArrayList<>();
@@ -787,7 +788,7 @@ public void NapaleonHiil(String chatId){
 
     sendPhoto(chatId.toString(), new File("C:/Users/Алекс/Documents/Russian Language 2.0/motivational books/Наполеон Хилл/MV5BYjViZjUwMjctODAyNy00Yjc3LTkwOWYtOTJhODg1Yzk1NDQ3XkEyXkFqcGdeQXVyMjA2NDEwMjg@._V1_.jpg"));
 
-    sendMessage.setText("Выбрать книгу Наполеон Хилл");
+    sendMessage.setText("Наполеон Хилл (Napoleon Hill) – американский писатель, журналист и мотивационный спикер, наиболее известный своей работой \"Думай и богатей\" (\"Think and Grow Rich\"). Он родился 26 октября 1883 года в штате Вирджиния, США. \n Выбрать книгу");
     InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
     List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
     List<InlineKeyboardButton> inlineKeyboardButtonList1 = new ArrayList<>();
